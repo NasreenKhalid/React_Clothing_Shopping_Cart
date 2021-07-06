@@ -6,7 +6,7 @@ export const Table = () => {
     return (
 <div className="container">
     <h2>Final Output</h2>
-<table>
+    <table>
     <thead>
     <tr className="header">
         <th>No</th>
