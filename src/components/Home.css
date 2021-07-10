@@ -1,15 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap");
+
+ *{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+font-family: 'Roboto', sans-serif;
+ }
+
 .products-container{
     display: grid;
     grid-template-columns: repeat(3,1fr);
+    
     margin: 30px;
 }
 
-.products-grid{
+@media screen and (max-width:768px){
+   .products-container{
+    grid-template-columns: minmax(125px,auto);
+   }
+   
+}
+
+.products-grider{
     
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    line-height: 0.01;
+    line-height: 1.3;
     padding-left: 3px;
     padding-bottom: 4px;
     height:330px;
@@ -21,37 +38,3 @@
 
 }
 
-.products-grid img{
-    margin: 2px 2px;
-    width:100%;
-    height:200px;
-}
-
-.products-grid .text{
-    text-transform: capitalize;
-    font-style: italic;
-}
-
-.star{
-    color: orange;
-    font-size: 15px;
-}
-
-span{
-    color: black;
-    font-size: 14px;
-    
-}
-
-.add-btn{
-    border-radius: 16px;
-    border:none;
-    outline: none;
-    cursor: pointer;
-    font-size: 14px;
-    padding: 7px 14px;
-    margin-bottom: 10px;
-    background-color: orange;
-    color: white;
-    font-weight: bolder;
-}

@@ -1,7 +1,77 @@
 .navbar{
     background-color: rgb(50, 50, 158);
     height:50px;
-    line-height: 2.8;
     color: white;
     font-weight: bolder;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar .title{
+    margin: auto 7px;
+    font-size: 24px;
+}
+
+.navbar ul{
+    display: flex;
+    list-style: none;
+    cursor: pointer;
+    color: white !important;
+    margin-top: 14px;
+    margin-right: 18px;
+}
+
+.navbar ul li a{
+    color: white;
+    padding:9px 11px;
+    text-decoration: none;
+    transition: all 2s ease;
+
+    
+}
+
+.navbar ul li a:hover{
+    border-bottom: 1px solid white;
+    
+}
+
+.navbar ul li:last-child a{
+border-bottom: none;
+}
+
+.input__wrapper input{
+    margin:auto 0px;
+    width:230px;
+    height:30px;
+    padding-top:3px;
+    font-size: 16px;
+    margin-top: 10px;
+    border-radius: 3px;
+    border: none;
+    outline: none;
+}
+
+.input__wrapper i{
+    padding-left: 8px;
+    font-size: 22px;
+}
+
+.cart__icon{
+    position: relative;
+}
+
+.item__count{
+    position: absolute;
+    width:10px;
+    height:10px;
+    top:1px;
+    right:20px;
+}
+
+.item__count span{
+    color: red;
+    background-color: black;
+    border-radius: 50%;
+   padding:3px 7px;
+   place-items: center;
 }

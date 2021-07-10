@@ -18,9 +18,13 @@ margin: auto;
  justify-content: space-between;
  cursor: pointer;
  font-size: 24px;
+position: relative;
+ 
 }
 
 .footer-icons a{
     color: white;
     margin-top:-16px;
+
 }
+
