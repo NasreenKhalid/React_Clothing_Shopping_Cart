@@ -23,23 +23,28 @@ const handleChange = (e) => {
 
 }
     return (
+        
         <div className="navbar">
             <div className="title">
             Best For You
             </div>
             <div className="input__wrapper">
+            
             <input 
             type="text" 
             placeholder="Search goes here..."
             value={inputText}
             onChange={handleChange}
             />
+           
             <button onClick={()=>{
-               setResults(searchProducts(inputText)) 
-                console.log(filteredProducts)
+        searchProducts(inputText)
+        setResults(filteredProducts)
+        console.log(results)
                  
-            }}><i className="fas fa-search"></i></button>
+            } }><i className="fas fa-search"></i></button>
             </div>
+          
            <ul>
                <li>
                    <Link to="/">Home</Link>
@@ -48,8 +53,9 @@ const handleChange = (e) => {
                    <Link to="/about">About</Link>
                </li>
                <li>
+               
                    <Link to="/cart"><i className="fas fa-shopping-cart cart_icon" aria-hidden="true"></i>
-                   {cartItems.length > 0 && (
+                   {cartItems && cartItems.length > 0 && (
                        <div className="item__count">
                            <span>{cartItems.length}</span>
 

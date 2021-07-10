@@ -1,3 +1,4 @@
+import { products } from '../../data'
 import {SHOW_HIDE_CART, ADD_TO_CART,REMOVE_FROM_CART, SEARCH_PRODUCTS} from '../Types'
 
 const CartReducer = (state,action) => {
@@ -11,10 +12,13 @@ const CartReducer = (state,action) => {
 }
 
     case ADD_TO_CART:{
+        
         return{
             ...state,
-            cartItems: [...state.cartItems,action.payload]
+            cartItems: [...state.cartItems,action.payload],
+          
         }
+        
     }
 
 
@@ -26,12 +30,15 @@ const CartReducer = (state,action) => {
     }
 
     case SEARCH_PRODUCTS: {
+        console.log("filteredState", state.products.filter((item)=>item.name === action.payload), action.payload)
+       
         return {
-             ...state,
+            ...state,
 
             filteredProducts: state.products.filter((item)=>item.name === action.payload),
          
         }
+  
     }
 
     default:
